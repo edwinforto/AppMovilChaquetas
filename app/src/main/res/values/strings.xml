@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kelda</string>
+    <string name="productos">Productos</string>
+    <string name="servicios">Servicios</string>
+    <string name="sucursales">Sucursales</string>
+
+</resources>
