@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,100 +7,133 @@
     tools:context=".MainActivity2">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <FrameLayout
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
+            android:layout_height="91dp"
+            app:srcCompat="@mipmap/ic_tuchaqueta" />
+
+        <TextView
+            android:id="@+id/text7"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_weight="0"
+            android:text="Nuestros Productos"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textColorHighlight="#5A2020"
+            android:textDirection="firstStrong"
+            android:textSize="24sp"
+            android:typeface="serif" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="408dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/amarillo"
-                    android:text="Productos" />
-            </LinearLayout>
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TableLayout
+            <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TableRow
-                    android:id="@+id/tabla1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imagen1"
+                    android:layout_width="107dp"
+                    android:layout_height="76dp"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-                    <ImageView
-                        android:id="@+id/imagen1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:srcCompat="@tools:sample/avatars" />
+                <TextView
+                    android:id="@+id/texto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chaquetas para dama "
+                    android:textColor="#FF9800"
+                    android:textSize="20sp"
+                    android:typeface="serif" />
+            </TableRow>
 
-                    <TextView
-                        android:id="@+id/texto2"
-                        android:layout_width="282dp"
-                        android:layout_height="match_parent"
-                        android:text="Chaqueta 100% de cuero, diseñado para personas\n arriesgadas. El precio es de 18000" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                </TableRow>
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    />
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/imagen2"
+                    android:layout_width="101dp"
+                    android:layout_height="68dp"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-                    <ImageView
-                        android:id="@+id/imagen2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:srcCompat="@tools:sample/avatars" />
+                <TextView
+                    android:id="@+id/texto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chaquetas para caballero"
+                    android:textColor="#FF9800"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+            </TableRow>
 
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Chaqueta 100% sintentica propicia para dias\n con mucha lluvia" />
-                </TableRow>
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    />
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/imagen3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:srcCompat="@tools:sample/avatars" />
+                <ImageView
+                    android:id="@+id/imagen3"
+                    android:layout_width="117dp"
+                    android:layout_height="62dp"
+                    tools:srcCompat="@tools:sample/avatars" />
 
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Bonita chaqueta propicia para\n personas jovenes" />
-                </TableRow>
+                <TextView
+                    android:id="@+id/texto3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chaquetas infantiles"
+                    android:textColor="#FF9800"
+                    android:textSize="20sp"
+                    android:typeface="serif" />
+            </TableRow>
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-            </TableLayout>
-        </FrameLayout>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chaquetas diseñadas para toda la familia… "
+            android:textAlignment="center"
+            android:textColor="#0C0C0C"
+            android:textColorHighlight="#5A2020"
+            android:textDirection="firstStrong"
+            android:textSize="20sp"
+            android:typeface="serif" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
 
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/t_c_2" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

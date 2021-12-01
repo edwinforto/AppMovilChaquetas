@@ -3,15 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/opcion1"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="@string/productos" />
-
+        android:id="@+id/home"
+        android:icon="@drawable/icono"
+        android:title="Home"
+        app:showAsAction="always"/>
     <item
-        android:id="@+id/opcion2"
-        android:title="@string/servicios" />
-
+        android:id="@+id/productos"
+        android:title="Productos" />
     <item
-        android:id="@+id/opcion3"
-        android:title="@string/sucursales" />
+        android:id="@+id/servicios"
+        android:title="Servicios" />
+    <item
+        android:id="@+id/sucursales"
+        android:title="Sucursales" />
 </menu>
