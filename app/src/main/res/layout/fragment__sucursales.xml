@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".Fragment_Sucursales">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider2a"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/texto0p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="NUESTRAS SUCURSALES"
+                    android:textAlignment="center"
+                    android:textColor="#700404"
+                    android:textSize="34sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider2b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text0des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="Tenemos sedes en Bogotá. Realizamos envíos a toda Colombia."
+                    android:textAlignment="center"
+                    android:textColor="#070400"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/text1su"
+                        android:layout_width="267dp"
+                        android:layout_height="115dp"
+                        android:fontFamily="@font/acme"
+                        android:text="C.C. Iserra 100 Tv. 55 # 98A-66"
+                        android:textAlignment="center"
+                        android:textColor="#0B0300"
+                        android:textDirection="ltr"
+                        android:textSize="24sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider2c"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/texto2p"
+                        android:layout_width="267dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/acme"
+                        android:text="C.C. Plaza Imperial Cra. 104 #148 - 07"
+                        android:textAlignment="center"
+                        android:textColor="#070200"
+                        android:textSize="24sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/texto3p"
+                        android:layout_width="267dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/acme"
+                        android:text="C.C. Plaza de las Américas Cra. 71d #6-94"
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider2e"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/texto4su"
+                        android:layout_width="267dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/acme"
+                        android:text="C.C. Titán Plaza Av. Boyacá #80-94"
+                        android:textAlignment="center"
+                        android:textColor="#0B0000"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider2f"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="196dp">
+
+                <ImageView
+                    android:id="@+id/imagenfinal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tch" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</FrameLayout>

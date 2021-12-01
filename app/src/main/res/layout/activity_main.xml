@@ -1,87 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFEFD"
+    android:orientation="vertical"
+    android:background="@color/teal_700"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="91dp"
-            app:srcCompat="@mipmap/ic_tuchaqueta" />
-
-        <TextView
-            android:id="@+id/text7"
-            android:layout_width="match_parent"
-            android:layout_height="111dp"
-            android:layout_weight="0"
-            android:text="¡Bienvenidos!"
-            android:textAlignment="center"
-            android:textColor="#FF5722"
-            android:textColorHighlight="#5A2020"
-            android:textDirection="firstStrong"
-            android:textSize="48sp"
-            android:typeface="serif" />
-
-        <View
-            android:id="@+id/divider5"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_tuchaqueta" />
-
-        <TextView
-            android:id="@+id/text8"
-            android:layout_width="match_parent"
-            android:layout_height="211dp"
-            android:layout_weight="1"
-            android:text="Esta es Tu Chaqueta, el lugar en donde encuentras el mejor diseño para ti.  Somos una tienda de chaquetas  prediseñadas y personalizadas; utilizamos los mejores materiales cuidando el medio ambiente."
-            android:textAlignment="center"
-            android:textColor="#951515"
-            android:textColorHighlight="#5A2020"
-            android:textDirection="firstStrong"
-            android:textSize="24sp"
-            android:typeface="serif" />
-
-        <TextView
-            android:id="@+id/text2"
-            android:layout_width="361dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Versión 1.0 Desarrollada por Denisse Rincón "
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:typeface="monospace" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <FrameLayout
+        android:id="@+id/contenedor_fragments"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/t_c_2" />
+    </FrameLayout>
 
-    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

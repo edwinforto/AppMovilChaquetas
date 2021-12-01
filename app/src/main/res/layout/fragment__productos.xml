@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment_Productos">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider6a"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/texto0p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="NUESTROS PRODUCTOS"
+                    android:textAlignment="center"
+                    android:textColor="#700404"
+                    android:textSize="34sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider6b"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen1"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/texto1sp"
+                        android:layout_width="271dp"
+                        android:layout_height="115dp"
+                        android:fontFamily="@font/acme"
+                        android:text="Chaquetas para caballero en todo tipo de diseños y variedad de colores"
+                        android:textAlignment="center"
+                        android:textColor="#0B0300"
+                        android:textDirection="ltr"
+                        android:textSize="24sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider6c"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/texto2p"
+                        android:layout_width="267dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/acme"
+                        android:text="Chaquetas para dama con variedad de colores"
+                        android:textAlignment="center"
+                        android:textColor="#070200"
+                        android:textSize="24sp"
+                        android:typeface="serif" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider6d"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagen2b"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/texto3p"
+                        android:layout_width="267dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/acme"
+                        android:text="Chaquetas infantiles en todas las tallas"
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider6e"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="Chaquetas diseñadas para toda la familia"
+                    android:textAlignment="center"
+                    android:textColor="#0B0000"
+                    android:textSize="34sp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/divider6f"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="?android:attr/listDivider" />
+            </TableRow>
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="196dp">
+
+                <ImageView
+                    android:id="@+id/imagenfinal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tch" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</FrameLayout>
