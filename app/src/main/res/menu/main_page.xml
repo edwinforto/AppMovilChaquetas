@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miniCartIcon"
+        android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+        android:title="cart"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/favoritesIcon"
+        android:icon="@drawable/ic_baseline_star_outline_24"
+        android:title="favoritos"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/main"
+        android:icon="@drawable/ic_baseline_menu_open_24"
+        android:title="Main"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_jacket_icon_126679"
+        android:title="Productos" />
+
+    <item
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_sewing_machine_icon_151656"
+        android:title="Servicios" />
+    <item
+        android:id="@+id/nav_slideshow"
+        android:icon="@drawable/ic_info_about_information_icon_132735"
+        android:title="Sucursales" />
+
+</menu>
