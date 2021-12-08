@@ -1,17 +1,23 @@
-package com.example.aplicacionchaqueta;
+package com.example.aplicacionchaqueta.Controlador;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.aplicacionchaqueta.R;
+import com.example.aplicacionchaqueta.Vista.FragmentMain;
+import com.example.aplicacionchaqueta.Vista.Fragment_Favoritos;
+import com.example.aplicacionchaqueta.Vista.Fragment_Productos;
+import com.example.aplicacionchaqueta.Vista.Fragment_Servicios;
+import com.example.aplicacionchaqueta.Vista.Fragment_ShoppingCar;
+import com.example.aplicacionchaqueta.Vista.Fragment_Sucursales;
 
 public class MainActivity extends AppCompatActivity {
 

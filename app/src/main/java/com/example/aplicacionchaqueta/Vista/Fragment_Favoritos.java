@@ -1,4 +1,4 @@
-package com.example.aplicacionchaqueta;
+package com.example.aplicacionchaqueta.Vista;
 
 import android.os.Bundle;
 
@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Fragment_Sucursales extends Fragment {
+import com.example.aplicacionchaqueta.R;
+
+public class Fragment_Favoritos extends Fragment {
 
     private View view;
 
-    public Fragment_Sucursales() {
+    public Fragment_Favoritos() {
         // Required empty public constructor
     }
 
@@ -20,7 +22,7 @@ public class Fragment_Sucursales extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment__sucursales, container, false);
+        view = inflater.inflate(R.layout.fragment__favoritos, container, false);
         //--------------------------------------------------------------------------------
 
 

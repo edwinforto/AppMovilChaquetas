@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionChaqueta">
         <activity
-            android:name=".MainActivity"
+            android:name=".Controlador.MainActivity"
+            android:exported="false"
+            />
+        <activity
+            android:name=".Vista.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

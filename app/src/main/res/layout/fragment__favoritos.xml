@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Red"
-    tools:context=".Fragment_Favoritos">
+    tools:context=".Vista.Fragment_Favoritos">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
