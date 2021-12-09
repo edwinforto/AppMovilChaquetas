@@ -27,12 +27,12 @@ public class DataBaseSQLController extends SQLiteOpenHelper {
 
         //******************************* TABLA SERVICIOS***************************
         //Creacion de la tabla
-        database.execSQL("CREATE TABLE servicios (descripcion TEXT)");
+        database.execSQL("CREATE TABLE servicios (img INT, descripcion TEXT)");
 
         //llenar la tabla con datos
-        database.execSQL("INSERT INTO servicios VALUES ('Compra y adquiere de forma inmediata nvarios productos.')");
-        database.execSQL("INSERT INTO servicios VALUES ('Tráenos tus chaquetas y te las lavamos.')");
-        database.execSQL("INSERT INTO servicios VALUES ('¿Cansado de usar lo mismo? trae tu chaqueta y cámbiala.')");
+        database.execSQL("INSERT INTO servicios VALUES (0,'Compra y adquiere de forma inmediata varios productos.')");
+        database.execSQL("INSERT INTO servicios VALUES (1,'Tráenos tus chaquetas y te las lavamos.')");
+        database.execSQL("INSERT INTO servicios VALUES (2,'¿Cansado de usar lo mismo? trae tu chaqueta y cámbiala.')");
 
     }
 

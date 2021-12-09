@@ -5,6 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.aplicacionchaqueta.R;
 
 import java.util.ArrayList;
 import java.util.zip.Inflater;
@@ -34,9 +39,27 @@ public class AdaptadorServicio extends BaseAdapter {
         return 0;
     }
 
+    /**
+     * Se ponen los valores que corresponden a cada item
+     * @param pos
+     * @param view
+     * @param viewGroup
+     * @return
+     */
     @Override
     public View getView(int pos, View view, ViewGroup viewGroup) {
-        //view = LayoutInflater.from(context).inflate(R)
+
+        EntidadServicio item = (EntidadServicio) getItem(pos);
+        view = LayoutInflater.from(context).inflate(R.layout.item_servicio,null);
+        //--------------------------------------------------------
+        ImageView img1 = (ImageView) view.findViewById(R.id.imgServicio);
+        TextView descripcion = (TextView) view.findViewById(R.id.textServicio);
+        CheckBox favServicio = (CheckBox) view.findViewById(R.id.favServicio);
+
+        //--------------------ENLAZAR ELEMENTOS-------------------
+        img1.setImageResource(item.getImg());
+        descripcion.setText(item.getDescripcion());
+
         return view;
     }
 }
