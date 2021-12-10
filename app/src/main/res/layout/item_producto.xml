@@ -5,13 +5,12 @@
     android:layout_height="match_parent">
 
     <TableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="331dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50px"
-    >
+        android:layout_marginTop="50px">
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="352dp"
             android:layout_height="match_parent"
             android:padding="5px">
 
@@ -22,13 +21,14 @@
 
                 <ImageView
                     android:id="@+id/imagenItem"
-                    android:layout_width="370px"
-                    android:layout_height="370px"
+                    android:layout_width="131dp"
+                    android:layout_height="131dp"
                     android:layout_weight="1" />
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="107dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -36,15 +36,19 @@
                     android:id="@+id/nombreItem"
                     android:layout_width="match_parent"
                     android:layout_height="46dp"
-                    android:textColor="@color/white"
-                    android:textSize="12pt"/>
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/descripcionItem"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:textColor="@color/white"
-                    android:textSize="10pt"/>
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/valorItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textSize="10sp" />
 
             </LinearLayout>
 
@@ -67,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:text="Agregar al carrito"
-                    android:textSize="10sp" />
+                    android:textSize="8sp" />
 
             </LinearLayout>
 

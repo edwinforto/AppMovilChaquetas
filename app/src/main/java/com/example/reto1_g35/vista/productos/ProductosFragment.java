@@ -16,6 +16,7 @@ import com.example.reto1_g35.modelo.DataBaseSQLController;
 import com.example.reto1_g35.modelo.producto.AdaptadorProducto;
 import com.example.reto1_g35.modelo.producto.EntidadProducto;
 
+import java.time.Clock;
 import java.util.ArrayList;
 
 
@@ -25,8 +26,8 @@ public class ProductosFragment extends Fragment {
     private View view;
     private Cursor cursor;
     private ArrayList<EntidadProducto> listaProductos = new ArrayList<>();
-    private int[] listImg = {R.drawable.catalogmujer1,R.drawable.catalogmujer2,R.drawable.catalogmujer3,
-            R.drawable.catalogohombre1, R.drawable.catalogohombre2};
+    private int[] listImg = {R.drawable.catalogohombre3,R.drawable.catalogohombre3,R.drawable.catalogmujer3,
+            R.drawable.catalogohombre3, R.drawable.catalogohombre3};
     private ListView listViewProd;
     private AdaptadorProducto adaptadorProducto;
 
@@ -58,12 +59,12 @@ public class ProductosFragment extends Fragment {
 
         conector.onUpgrade(db_read,1,2);
         cursor = db_read.rawQuery("SELECT * FROM productos", null);
-
+System.out.println(cursor.toString());
 
         //Escritura de elementos de la Base de Datos a la parte visual
         while (cursor.moveToNext()) {
-            listaProductos.add(new EntidadProducto(listImg[cursor.getInt(0)],cursor.getString(1),cursor.getString(2) ));
-            //lista.append(cursor.getString(0)+" "+cursor.getString(1));
+            listaProductos.add(new EntidadProducto(listImg[cursor.getInt(0)],cursor.getString(1),cursor.getString(2),cursor.getString(3),Boolean.getBoolean(cursor.getString(4))));
+
 
         }
         return listaProductos;

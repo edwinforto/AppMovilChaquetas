@@ -50,6 +50,7 @@ public class AdaptadorProducto extends BaseAdapter {
         ImageView img1 = (ImageView) view.findViewById(R.id.imagenItem);
         TextView titulo = (TextView) view.findViewById(R.id.nombreItem);
         TextView descripcion = (TextView) view.findViewById(R.id.descripcionItem);
+        TextView valor = (TextView) view.findViewById(R.id.valorItem);
         Button compra = (Button) view.findViewById(R.id.compra);
         CheckBox fav = (CheckBox) view.findViewById(R.id.fav);
 
@@ -58,7 +59,7 @@ public class AdaptadorProducto extends BaseAdapter {
         img1.setImageResource(item.getImagen());
         titulo.setText(item.getTitulo());
         descripcion.setText(item.getDescripcion());
-
+        valor.setText(item.getValor());
 
         //------------------------------------------------------------------------
         return view;
