@@ -25,11 +25,12 @@ public class ProductosFragment extends Fragment {
     private View view;
     private Cursor cursor;
     private ArrayList<EntidadProducto> listaProductos = new ArrayList<>();
-    private int[] listImg = {R.drawable.cuero,R.drawable.pana,R.drawable.impermeable, R.drawable.capucha};
+    private int[] listImg = {R.drawable.catalogmujer1,R.drawable.catalogmujer2,R.drawable.catalogmujer3,
+            R.drawable.catalogohombre1, R.drawable.catalogohombre2};
     private ListView listViewProd;
     private AdaptadorProducto adaptadorProducto;
 
-    public Fragment_Productos() {
+    public ProductosFragment() {
         // Required empty public constructor
     }
 

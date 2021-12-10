@@ -11,6 +11,9 @@
         android:theme="@style/Theme.Reto1G35">
         <activity
             android:name=".controlador.MainActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".vista.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -28,6 +28,7 @@ public class AdaptadorProducto extends BaseAdapter {
     @Override
     public int getCount() {
         return listaProd.size();
+    }
 
     @Override
     public Object getItem(int pos) {
@@ -46,9 +47,9 @@ public class AdaptadorProducto extends BaseAdapter {
 
         view = LayoutInflater.from(context).inflate(R.layout.item_producto, null);
         //------------------------------------------------------------------------
-        ImageView img1 = (ImageView) view.findViewById(R.id.img);
-        TextView titulo = (TextView) view.findViewById(R.id.titulo);
-        TextView descripcion = (TextView) view.findViewById(R.id.descripcion);
+        ImageView img1 = (ImageView) view.findViewById(R.id.imagenItem);
+        TextView titulo = (TextView) view.findViewById(R.id.nombreItem);
+        TextView descripcion = (TextView) view.findViewById(R.id.descripcionItem);
         Button compra = (Button) view.findViewById(R.id.compra);
         CheckBox fav = (CheckBox) view.findViewById(R.id.fav);
 

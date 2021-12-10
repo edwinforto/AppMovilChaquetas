@@ -9,14 +9,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.aplicacionchaqueta.Controlador.MainActivity;
-import com.example.aplicacionchaqueta.R;
+import com.example.reto1_g35.controlador.MainActivity;
+import com.example.reto1_g35.R;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private Thread h1;
-    private ImageView iconLoading;
-    private ProgressBar progressBar;
+    private Thread hilo1;
+    private ImageView iconoCarga;
+    private ProgressBar barraProgreso;
     private TextView percent;
     private Handler handler = new Handler();
     private int number = 0;
@@ -27,12 +27,12 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        iconLoading = (ImageView) findViewById(R.id.iconLoading);
-        iconLoading.setImageResource(R.drawable.icon);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        iconoCarga = (ImageView) findViewById(R.id.iconLoading);
+        iconoCarga.setImageResource(R.drawable.catalogohombre12);
+        barraProgreso = (ProgressBar) findViewById(R.id.progressBar);
         percent = (TextView) findViewById(R.id.percent);
 
-        h1 = new Thread(new Runnable() {
+        hilo1 = new Thread(new Runnable() {
             @Override
             public void run() {
                 while (number <= 100) {
@@ -40,7 +40,7 @@ public class SplashScreen extends AppCompatActivity {
                         @Override
                         public void run() {
                             percent.setText(number + " %");
-                            progressBar.setProgress(number);
+                            barraProgreso.setProgress(number);
                         }
                     });
                     try {
@@ -57,7 +57,7 @@ public class SplashScreen extends AppCompatActivity {
                 }
             }
         });
-        h1.start();
+        hilo1.start();
     }
 
 }
