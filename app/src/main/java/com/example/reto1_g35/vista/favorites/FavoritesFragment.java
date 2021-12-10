@@ -1,4 +1,4 @@
-package com.example.reto1_g35.ui.servicios;
+package com.example.reto1_g35.vista.favorites;
 
 import android.os.Bundle;
 
@@ -10,13 +10,15 @@ import android.view.ViewGroup;
 
 import com.example.reto1_g35.R;
 
-public class ServiciosFragment extends Fragment {
+
+public class FavoritesFragment extends Fragment {
+
     View v;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_servicios, container, false);
+        v = inflater.inflate(R.layout.fragment_favoritest, container, false);
         return v;
     }
 }

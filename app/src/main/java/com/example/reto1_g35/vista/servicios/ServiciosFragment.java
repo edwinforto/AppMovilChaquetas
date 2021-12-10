@@ -1,4 +1,4 @@
-package com.example.reto1_g35.ui.cart;
+package com.example.reto1_g35.vista.servicios;
 
 import android.os.Bundle;
 
@@ -10,14 +10,13 @@ import android.view.ViewGroup;
 
 import com.example.reto1_g35.R;
 
-
-public class CartFragment extends Fragment {
+public class ServiciosFragment extends Fragment {
     View v;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_cart, container, false);
+        v = inflater.inflate(R.layout.fragment_servicios, container, false);
         return v;
     }
 }

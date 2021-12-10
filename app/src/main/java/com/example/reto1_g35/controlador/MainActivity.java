@@ -1,4 +1,4 @@
-package com.example.reto1_g35;
+package com.example.reto1_g35.controlador;
 
 
 import androidx.annotation.NonNull;
@@ -12,11 +12,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.reto1_g35.ui.cart.CartFragment;
-import com.example.reto1_g35.ui.favorites.FavoritesFragment;
-import com.example.reto1_g35.ui.productos.ProductosFragment;
-import com.example.reto1_g35.ui.servicios.ServiciosFragment;
-import com.example.reto1_g35.ui.sucursales.SucursalesFragment;
+import com.example.reto1_g35.R;
+import com.example.reto1_g35.vista.Fragment_inicio;
+import com.example.reto1_g35.vista.cart.CartFragment;
+import com.example.reto1_g35.vista.favorites.FavoritesFragment;
+import com.example.reto1_g35.vista.productos.ProductosFragment;
+import com.example.reto1_g35.vista.servicios.ServiciosFragment;
+import com.example.reto1_g35.vista.sucursales.SucursalesFragment;
 
 
 
