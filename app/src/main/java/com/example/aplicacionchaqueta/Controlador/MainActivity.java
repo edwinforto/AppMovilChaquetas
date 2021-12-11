@@ -77,32 +77,32 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.menu1){
             change = getSupportFragmentManager().beginTransaction();
             change.replace(R.id.containerFragment,prod).commit();
-            Toast.makeText(this,"Ingreso a Productos", Toast.LENGTH_SHORT).show();
+
         }
         if(id == R.id.menu2){
             change = getSupportFragmentManager().beginTransaction();
             change.replace(R.id.containerFragment,serv).commit();
-            Toast.makeText(this,"Ingreso a Servicios ", Toast.LENGTH_SHORT).show();
+
         }
         if(id == R.id.menu3){
             change = getSupportFragmentManager().beginTransaction();
             change.replace(R.id.containerFragment,suc).commit();
-            Toast.makeText(this,"Ingreso a Sucursales ", Toast.LENGTH_SHORT).show();
+
         }
         if(id == R.id.iconB){
             change = getSupportFragmentManager().beginTransaction();
             change.replace(R.id.containerFragment,mainScreen).commit();
-            Toast.makeText(this,"Página Principal ", Toast.LENGTH_SHORT).show();
+
         }
         if(id == R.id.icon2_B){
             change = getSupportFragmentManager().beginTransaction();
             change.replace(R.id.containerFragment,fav).commit();
-            Toast.makeText(this,"Favoritos", Toast.LENGTH_SHORT).show();
+
         }
         if(id == R.id.icon3_B){
             change = getSupportFragmentManager().beginTransaction();
             change.replace(R.id.containerFragment,shoppingCar).commit();
-            Toast.makeText(this,"Carrito de compras", Toast.LENGTH_SHORT).show();
+
         }
         return super.onOptionsItemSelected(item);
     }

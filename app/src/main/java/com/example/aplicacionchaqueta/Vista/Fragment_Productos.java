@@ -56,12 +56,14 @@ public class Fragment_Productos extends Fragment {
     }
 
     private ArrayList<EntidadProducto> getProdItems(){
-        DataBaseSQLController conector = new DataBaseSQLController(this.getActivity(), "Productos", null, 1);
+        DataBaseSQLController conector = new DataBaseSQLController(this.getActivity(), "AppChaqueta", null, 1);
 
         SQLiteDatabase db_read = conector.getReadableDatabase();
 
+
         conector.onUpgrade(db_read,1,2);
         cursor = db_read.rawQuery("SELECT * FROM productos", null);
+
 
 
         //Escritura de elementos de la Base de Datos a la parte visual

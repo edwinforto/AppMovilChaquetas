@@ -48,7 +48,7 @@ public class Fragment_Servicios extends Fragment {
 
     private ArrayList<EntidadServicio> getServItems(){
 
-        DataBaseSQLController conector = new DataBaseSQLController(this.getActivity(), "Servicio", null, 1);
+        DataBaseSQLController conector = new DataBaseSQLController(this.getActivity(), "AppChaqueta", null, 1);
 
         SQLiteDatabase db_readS = conector.getReadableDatabase();
         conector.onUpgrade(db_readS,1,2);

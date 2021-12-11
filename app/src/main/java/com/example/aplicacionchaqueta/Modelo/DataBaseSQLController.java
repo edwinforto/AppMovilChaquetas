@@ -20,19 +20,24 @@ public class DataBaseSQLController extends SQLiteOpenHelper {
         database.execSQL("CREATE TABLE productos (img INT, titulo TEXT, descripcion TEXT)");
 
         //llenar la tabla con datos
-        database.execSQL("INSERT INTO productos VALUES (0,'Chaqueta de Cuero','Tallas: S,L,XL Precio: $256.000')");
-        database.execSQL("INSERT INTO productos VALUES (1,'Chaqueta de Pana','Tallas: S,M,L,XL Precio: $85.000')");
-        database.execSQL("INSERT INTO productos VALUES (2,'Chaqueta Impermeable','Tallas: S,M,L Precio: $120.000')");
-        database.execSQL("INSERT INTO productos VALUES (3,'Chaqueta Capucha','Tallas: M,L,XL Precio: $95.000')");
+        database.execSQL("INSERT INTO productos VALUES (0,'Chaqueta de Cuero','Precio: $256.000')");
+        database.execSQL("INSERT INTO productos VALUES (1,'Chaqueta de Pana','Precio: $85.000')");
+        database.execSQL("INSERT INTO productos VALUES (2,'Chaqueta Impermeable','Precio: $120.000')");
+        database.execSQL("INSERT INTO productos VALUES (3,'Chaqueta Capucha','Precio: $95.000')");
 
         //******************************* TABLA SERVICIOS***************************
         //Creacion de la tabla
-        database.execSQL("CREATE TABLE servicios (img INT, descripcion TEXT)");
+
+        database.execSQL("CREATE TABLE servicios (img INT, titulo TEXT)");
 
         //llenar la tabla con datos
         database.execSQL("INSERT INTO servicios VALUES (0,'Compra y adquiere de forma inmediata varios productos.')");
         database.execSQL("INSERT INTO servicios VALUES (1,'Tráenos tus chaquetas y te las lavamos.')");
         database.execSQL("INSERT INTO servicios VALUES (2,'¿Cansado de usar lo mismo? trae tu chaqueta y cámbiala.')");
+
+        //******************************* TABLA COMPRA ******************************
+        database.execSQL("CREATE TABLE compra (img INT, titulo TEXT)");
+
 
     }
 
@@ -40,6 +45,7 @@ public class DataBaseSQLController extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
        database.execSQL("DROP TABLE productos");
        database.execSQL("DROP TABLE servicios");
+       database.execSQL("DROP TABLE compra");
        onCreate(database);
 
     }

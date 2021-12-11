@@ -20,14 +20,18 @@
         android:textColor="@color/Red"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView10"
+    <ListView
+        android:id="@+id/viewShopping"
         android:layout_width="wrap_content"
+        android:layout_height="644dp"
+        android:layout_marginTop="100px" />
+
+    <Button
+        android:id="@+id/finalizarCompra"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/comicboys"
-        android:text="Carrito de compras"
-        android:textColor="@color/Yellow"
-        android:textSize="15pt" />
+        android:layout_gravity="bottom"
+        android:text="Finalizar Compra" />
+
 
 </FrameLayout>
