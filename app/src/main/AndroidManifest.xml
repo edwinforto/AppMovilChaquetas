@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="usa.sesion5.Reto1">
+    package="com.example.aplicacionchaqueta">
 
     <application
         android:allowBackup="true"
@@ -8,18 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Repaso">
+        android:theme="@style/Theme.AplicacionChaqueta">
         <activity
-            android:name="usa.sesion5.Reto1.MainActivity4"
-            android:exported="true" />
+            android:name=".Controlador.MainActivity"
+            android:exported="false" />
         <activity
-            android:name="usa.sesion5.Reto1.MainActivity3"
-            android:exported="true" />
-        <activity
-            android:name="usa.sesion5.Reto1.MainActivity2"
-            android:exported="true" />
-        <activity
-            android:name="usa.sesion5.Reto1.MainActivity"
+            android:name=".Vista.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
