@@ -1,6 +1,7 @@
 package com.example.aplicacionchaqueta.Modelo.Compra;
 
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.aplicacionchaqueta.Modelo.DataBaseSQLController;
 import com.example.aplicacionchaqueta.R;
 
 import java.util.ArrayList;
@@ -65,6 +68,12 @@ public class AdaptadorCompra extends BaseAdapter {
 
         //-------------------- OBTENER DATOS -----------------------------
 
+        borrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,"Se borra el elemento",Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         return view;
