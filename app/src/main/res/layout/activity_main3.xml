@@ -42,7 +42,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imagen1"
+                        android:id="@+id/imagen1_serv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:srcCompat="@tools:sample/avatars" />
@@ -63,7 +63,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imagen2"
+                        android:id="@+id/imagen2_serv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:srcCompat="@tools:sample/avatars" />
@@ -83,7 +83,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imagen3"
+                        android:id="@+id/imagen3_serv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:srcCompat="@tools:sample/avatars" />

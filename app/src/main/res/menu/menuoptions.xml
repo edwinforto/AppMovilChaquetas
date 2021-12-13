@@ -15,7 +15,7 @@
         app:showAsAction="always"></item>
     <item
         android:id="@+id/iconB"
-        android:icon="@drawable/icon"
+        android:icon="@drawable/logochaquetas"
         android:title="Icono"
         app:showAsAction="always"></item>
     <item

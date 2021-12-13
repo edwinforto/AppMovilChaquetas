@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:foreground="@drawable/ic_launcher_foreground"
     android:foregroundTint="#FBFBFB"
-    tools:context=".Controlador.MainActivity">
+    tools:context=".MainActivity">
 
     <FrameLayout
         android:id="@+id/containerFragment"

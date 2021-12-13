@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Red"
-    tools:context=".Vista.Fragment_ShoppingCar">
+
+    tools:context=".Fragment_ShoppingCar">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -12,12 +12,10 @@
         android:id="@+id/servTit3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/Yellow"
-        android:fontFamily="@font/cooper"
         android:text="CARRITO DE COMPRAS"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/Red"
+
         android:textStyle="bold" />
 
     <TextView
@@ -25,9 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:fontFamily="@font/comicboys"
         android:text="Carrito de compras"
-        android:textColor="@color/Yellow"
+        android:textColor="@color/dorado"
         android:textSize="15pt" />
 
 </FrameLayout>
