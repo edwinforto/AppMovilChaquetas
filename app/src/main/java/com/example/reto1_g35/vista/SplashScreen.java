@@ -27,9 +27,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        iconoCarga = (ImageView) findViewById(R.id.iconLoading);
-        iconoCarga.setImageResource(R.drawable.catalogohombre12);
-        barraProgreso = (ProgressBar) findViewById(R.id.progressBar);
+       // iconoCarga.setImageResource(R.drawable.catalogohombre12);
         percent = (TextView) findViewById(R.id.percent);
 
         hilo1 = new Thread(new Runnable() {
@@ -40,7 +38,7 @@ public class SplashScreen extends AppCompatActivity {
                         @Override
                         public void run() {
                             percent.setText(number + " %");
-                            barraProgreso.setProgress(number);
+
                         }
                     });
                     try {

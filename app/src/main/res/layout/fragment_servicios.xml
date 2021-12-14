@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0178AE"
     tools:context=".vista.servicios.ServiciosFragment">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <TableLayout
             android:layout_width="wrap_content"
@@ -27,13 +29,13 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/texto0p"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sección servicios"
+                    android:text="Sección Servicios"
                     android:textAlignment="center"
                     android:textSize="34sp" />
             </TableRow>
@@ -60,16 +62,16 @@
 
                     <ImageView
                         android:id="@+id/imagen1"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        tools:srcCompat="@drawable/ic_sewing_machine_icon_151656" />
 
                     <TextView
                         android:id="@+id/texto1sp"
                         android:layout_width="271dp"
                         android:layout_height="115dp"
-                        android:text="Descripcion servicios 1"
-                        android:textAlignment="center"
+                        android:text="Confección"
+                        android:textAlignment="viewStart"
                         android:textColor="#0B0300"
                         android:textDirection="ltr"
                         android:textSize="24sp"
@@ -99,16 +101,16 @@
 
                     <ImageView
                         android:id="@+id/imagen2"
-                        android:layout_width="90dp"
+                        android:layout_width="106dp"
                         android:layout_height="90dp"
-                        tools:srcCompat="@tools:sample/avatars" />
+                        tools:srcCompat="@drawable/ic_baseline_local_laundry_service_24" />
 
                     <TextView
                         android:id="@+id/texto2p"
                         android:layout_width="267dp"
                         android:layout_height="match_parent"
-                        android:text="Descripcion servicios 2"
-                        android:textAlignment="center"
+                        android:text="Lavanderia"
+                        android:textAlignment="viewStart"
                         android:textColor="#070200"
                         android:textSize="24sp"
                         android:typeface="serif" />
@@ -137,20 +139,21 @@
 
                     <ImageView
                         android:id="@+id/imagen2b"
-                        android:layout_width="90dp"
+                        android:layout_width="110dp"
                         android:layout_height="90dp"
-                        tools:src="@tools:sample/avatars" />
+                        tools:src="@drawable/ic_baseline_card_giftcard_24" />
 
                     <TextView
                         android:id="@+id/texto3p"
                         android:layout_width="267dp"
                         android:layout_height="match_parent"
-                        android:text="Descripcion servicios 3"
-                        android:textAlignment="center"
+                        android:text="Regalos"
+                        android:textAlignment="viewStart"
                         android:textColor="#070000"
                         android:textSize="24sp" />
                 </LinearLayout>
             </TableRow>
+
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -161,6 +164,7 @@
                     android:layout_height="20dp"
                     android:background="?android:attr/listDivider" />
             </TableRow>
+
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -170,5 +174,7 @@
 
         </TableLayout>
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0178AE"
     tools:context=".vista.sucursales.SucursalesFragment">
 
     <ScrollView
@@ -27,7 +28,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/texto0p"
@@ -68,7 +69,7 @@
                         android:id="@+id/texto1sp"
                         android:layout_width="271dp"
                         android:layout_height="115dp"
-                        android:text="Descripcion sucursales 1"
+                        android:text="CC Unicentro de Occidente\nCarrera 111C #86 - 74 "
                         android:textAlignment="center"
                         android:textColor="#0B0300"
                         android:textDirection="ltr"
@@ -107,7 +108,7 @@
                         android:id="@+id/texto2p"
                         android:layout_width="267dp"
                         android:layout_height="match_parent"
-                        android:text="Descripcion sucursales 2"
+                        android:text="Centro Comercial Metrópolis\nAvenida 68 # 75A - 50"
                         android:textAlignment="center"
                         android:textColor="#070200"
                         android:textSize="24sp"
@@ -145,12 +146,13 @@
                         android:id="@+id/texto3p"
                         android:layout_width="267dp"
                         android:layout_height="match_parent"
-                        android:text="Descripcion sucursales 3"
+                        android:text="Calle 19 # 69-79 \n· (1) 2948999"
                         android:textAlignment="center"
                         android:textColor="#070000"
                         android:textSize="24sp" />
                 </LinearLayout>
             </TableRow>
+
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -161,6 +163,7 @@
                     android:layout_height="20dp"
                     android:background="?android:attr/listDivider" />
             </TableRow>
+
             <TableRow
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">

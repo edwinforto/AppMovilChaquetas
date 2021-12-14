@@ -8,31 +8,43 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="594dp"
+        android:layout_height="match_parent"
+        android:background="#3F51B5"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iconLoading"
-            android:layout_width="221dp"
-            android:layout_height="275dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="600px"
-            tools:srcCompat="@drawable/catalogohombre2" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:background="#3F51B5"
+            android:backgroundTint="#3F51B5" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="176dp"
-            android:layout_height="58dp"
-            android:layout_gravity="center" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="347dp"
+            android:background="#0178AE"
+            android:backgroundTint="#3F51B5">
 
-        <TextView
-            android:id="@+id/percent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="TextView"
-            android:textSize="13pt" />
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/progressBar"
+                android:layout_width="66dp"
+                android:layout_height="81dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loading"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="TextView"
+                android:textSize="13pt" />
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

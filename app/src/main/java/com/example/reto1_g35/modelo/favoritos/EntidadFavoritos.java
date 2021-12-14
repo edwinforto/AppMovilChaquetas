@@ -1,6 +1,6 @@
-package com.example.reto1_g35.modelo.producto;
+package com.example.reto1_g35.modelo.favoritos;
 
-public class EntidadProducto {
+public class EntidadFavoritos {
 
     private int imagen;
     private String titulo;
@@ -8,7 +8,7 @@ public class EntidadProducto {
     private String valor;
     private String favoritos;
 
-    public EntidadProducto(int imagen, String titulo, String descripcion, String valor, String favoritos ) {
+    public EntidadFavoritos(int imagen, String titulo, String descripcion, String valor, String favoritos ) {
         this.imagen = imagen;
         this.titulo = titulo;
         this.descripcion = descripcion;

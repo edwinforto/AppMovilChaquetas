@@ -22,7 +22,7 @@ public class DataBaseSQLController extends SQLiteOpenHelper {
 
         //Insertar Data tabla Productos
         database.execSQL("INSERT INTO productos VALUES (0,'La Chamarra','Chaqueta Aimar', 'Valor:\t$144.990', 'FALSE')");
-        database.execSQL("INSERT INTO productos VALUES (1,'Ambiance','Chaqueta Alphonse', 'Valor:\t$223.900', 'FALSE')");
+        database.execSQL("INSERT INTO productos VALUES (1,'Ambiance','Chaqueta Alphonse', 'Valor:\t$223.900', 'TRUE')");
         database.execSQL("INSERT INTO productos VALUES (2,'Generic','Chaqueta Rompeviento', 'Valor:\t$106.900', 'FALSE')");
         database.execSQL("INSERT INTO productos VALUES (3,'Desigual','Chaqueta Virginia', 'Valor:\t$282.990', 'FALSE')");
         database.execSQL("INSERT INTO productos VALUES (4,'Paris District','Chaqueta Gem', 'Valor:\t$379.990', 'FALSE')");
@@ -30,7 +30,8 @@ public class DataBaseSQLController extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
-       database.execSQL("DROP TABLE productos");
+        System.out.println("++++++++reiniciando tabla");
+        database.execSQL("DROP TABLE productos");
        onCreate(database);
 
     }
