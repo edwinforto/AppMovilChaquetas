@@ -60,17 +60,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <Space
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1" />
+
                     <ImageView
-                        android:id="@+id/imagen1"
+                        android:id="@+id/imageView2"
                         android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        tools:srcCompat="@drawable/ic_sewing_machine_icon_151656" />
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_sewing_machine_icon_151656" />
 
                     <TextView
                         android:id="@+id/texto1sp"
                         android:layout_width="271dp"
                         android:layout_height="115dp"
-                        android:text="Confección"
+                        android:text="\tConfección"
                         android:textAlignment="viewStart"
                         android:textColor="#0B0300"
                         android:textDirection="ltr"
@@ -99,17 +105,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <Space
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1" />
+
                     <ImageView
-                        android:id="@+id/imagen2"
-                        android:layout_width="106dp"
-                        android:layout_height="90dp"
-                        tools:srcCompat="@drawable/ic_baseline_local_laundry_service_24" />
+                        android:id="@+id/imageView3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_local_laundry_service_24" />
 
                     <TextView
                         android:id="@+id/texto2p"
                         android:layout_width="267dp"
                         android:layout_height="match_parent"
-                        android:text="Lavanderia"
+                        android:text="\tLavanderia"
                         android:textAlignment="viewStart"
                         android:textColor="#070200"
                         android:textSize="24sp"
@@ -137,17 +149,23 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <Space
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1" />
+
                     <ImageView
-                        android:id="@+id/imagen2b"
-                        android:layout_width="110dp"
-                        android:layout_height="90dp"
-                        tools:src="@drawable/ic_baseline_card_giftcard_24" />
+                        android:id="@+id/imageView4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_baseline_card_giftcard_24" />
 
                     <TextView
                         android:id="@+id/texto3p"
                         android:layout_width="267dp"
                         android:layout_height="match_parent"
-                        android:text="Regalos"
+                        android:text="\tRegalos"
                         android:textAlignment="viewStart"
                         android:textColor="#070000"
                         android:textSize="24sp" />

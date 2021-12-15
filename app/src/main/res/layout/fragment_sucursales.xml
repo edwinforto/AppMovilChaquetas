@@ -59,18 +59,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imagen1"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
                     <TextView
                         android:id="@+id/texto1sp"
-                        android:layout_width="271dp"
-                        android:layout_height="115dp"
-                        android:text="CC Unicentro de Occidente\nCarrera 111C #86 - 74 "
-                        android:textAlignment="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="\tCC Unicentro de Occidente\n\tCarrera 111C #86 - 74 "
+                        android:textAlignment="viewStart"
                         android:textColor="#0B0300"
                         android:textDirection="ltr"
                         android:textSize="24sp"
@@ -98,18 +92,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imagen2"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        tools:srcCompat="@tools:sample/avatars" />
-
                     <TextView
                         android:id="@+id/texto2p"
-                        android:layout_width="267dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Centro Comercial Metrópolis\nAvenida 68 # 75A - 50"
-                        android:textAlignment="center"
+                        android:text="\tCC Metrópolis\n\tAvenida 68 # 75A - 50"
+                        android:textAlignment="textStart"
                         android:textColor="#070200"
                         android:textSize="24sp"
                         android:typeface="serif" />
@@ -136,18 +124,12 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/imagen2b"
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        tools:src="@tools:sample/avatars" />
-
                     <TextView
                         android:id="@+id/texto3p"
-                        android:layout_width="267dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Calle 19 # 69-79 \n· (1) 2948999"
-                        android:textAlignment="center"
+                        android:text="\tSede Teusaquillo \n\tCalle 19 # 69-79"
+                        android:textAlignment="textStart"
                         android:textColor="#070000"
                         android:textSize="24sp" />
                 </LinearLayout>
@@ -165,9 +147,25 @@
             </TableRow>
 
             <TableRow
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="200dp"
+                android:layout_height="200dp">
 
+
+                <ScrollView
+                    android:layout_width="368dp"
+                    android:layout_height="368dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <org.osmdroid.views.MapView
+                            android:id="@+id/mapView"
+                            android:layout_width="368dp"
+                            android:layout_height="368dp" />
+                    </LinearLayout>
+                </ScrollView>
 
             </TableRow>
 
