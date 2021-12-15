@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dorado"
+    tools:context=".vista.servicios.ServiciosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/servTit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SERVICIOS"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@color/black"
+        android:textColor="@color/dorado"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40pt">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/compraF"
+                android:layout_width="118dp"
+                android:layout_height="match_parent"
+
+                android:padding="5px"
+                app:srcCompat="@drawable/lavanderia" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:lines="5"
+                android:padding="4px"
+                android:text="Por la compla de tu chaqueta\n puedes acceder a dos \n lavadas gratis en nuestra\n lavanderia."
+                android:textColor="@color/black"
+                android:textSize="9pt" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80px"
+            android:padding="5px">
+
+            <ImageView
+                android:id="@+id/limpiarF"
+                android:layout_width="118dp"
+                android:layout_height="118dp"
+
+                app:srcCompat="@drawable/intercambiodechaquetas" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/dorado"
+                android:lines="3"
+                android:padding="5px"
+                android:text="Traernos tu chaqueta vieja y\n te haremos un descuento\n en tu chaqueta nueva"
+                android:textColor="@color/black"
+                android:textSize="9pt" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80px">
+
+            <ImageView
+                android:id="@+id/cambioF"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
+                android:layout_marginLeft="5px"
+                android:background="@color/dorado"
+                android:padding="10px"
+                app:srcCompat="@drawable/entrega" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="282dp"
+                android:layout_height="wrap_content"
+                android:background="@color/dorado"
+                android:lines="3"
+                android:padding="10px"
+                android:text="Por la compra de tres \n chaquetas el frete es\n gratis"
+                android:textColor="@color/black"
+                android:textSize="9pt" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</FrameLayout>
