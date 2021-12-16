@@ -1,4 +1,4 @@
-package com.example.reto3.vista.productos;
+package com.example.reto4.vista.productos;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -12,11 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.reto3.R;
-import com.example.reto3.controlador.MainActivity;
-import com.example.reto3.modelo.DataBaseSQLController;
-import com.example.reto3.modelo.producto.AdaptadorProducto;
-import com.example.reto3.modelo.producto.EntidadProducto;
+import com.example.reto4.R;
+import com.example.reto4.controlador.MainActivity;
+import com.example.reto4.modelo.DataBaseSQLController;
+import com.example.reto4.modelo.producto.AdaptadorProducto;
+import com.example.reto4.modelo.producto.EntidadProducto;
 
 import java.util.ArrayList;
 

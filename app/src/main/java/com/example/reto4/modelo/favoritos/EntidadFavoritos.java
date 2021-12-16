@@ -1,4 +1,4 @@
-package com.example.reto3.modelo.favoritos;
+package com.example.reto4.modelo.favoritos;
 
 public class EntidadFavoritos {
     private int imagen;

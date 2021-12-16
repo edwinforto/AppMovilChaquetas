@@ -1,4 +1,4 @@
-package com.example.reto3.modelo.favoritos;
+package com.example.reto4.modelo.favoritos;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -11,9 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.reto3.R;
-import com.example.reto3.modelo.producto.EntidadProducto;
-import com.example.reto3.vista.productos.ProductosFragment;
+import com.example.reto4.R;
+import com.example.reto4.modelo.producto.EntidadProducto;
+import com.example.reto4.vista.productos.ProductosFragment;
 
 import java.util.ArrayList;
 

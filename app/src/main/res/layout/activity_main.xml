@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:foreground="@drawable/ic_launcher_foreground"
     android:foregroundTint="#FBFBFB"
-    tools:context="com.example.reto3.controlador.MainActivity">
+    tools:context="com.example.reto4.com.example.reto4.controlador.MainActivity">
 
     <FrameLayout
         android:id="@+id/containerFragment"

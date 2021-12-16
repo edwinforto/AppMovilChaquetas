@@ -1,4 +1,4 @@
-package com.example.reto3.modelo.producto;
+package com.example.reto4.modelo.producto;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -12,8 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import com.example.reto3.R;
-import com.example.reto3.vista.productos.ProductosFragment;
+import com.example.reto4.R;
+import com.example.reto4.vista.productos.ProductosFragment;
 import java.util.ArrayList;
 
 public class AdaptadorProducto extends BaseAdapter {

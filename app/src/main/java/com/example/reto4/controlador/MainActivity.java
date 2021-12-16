@@ -1,4 +1,4 @@
-package com.example.reto3.controlador;
+package com.example.reto4.controlador;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,14 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.reto3.R;
+import com.example.reto4.R;
 
-import com.example.reto3.vista.InicioFragment;
-import com.example.reto3.vista.sucursales.SucursalesFragment;
-import com.example.reto3.vista.cart.CartFragment;
-import com.example.reto3.vista.favoritos.FavoritesFragment;
-import com.example.reto3.vista.productos.ProductosFragment;
-import com.example.reto3.vista.servicios.ServiciosFragment;
+import com.example.reto4.vista.InicioFragment;
+import com.example.reto4.vista.sucursales.SucursalesFragment;
+import com.example.reto4.vista.cart.CartFragment;
+import com.example.reto4.vista.favoritos.FavoritesFragment;
+import com.example.reto4.vista.productos.ProductosFragment;
+import com.example.reto4.vista.servicios.ServiciosFragment;
 
 
 public class MainActivity extends AppCompatActivity {

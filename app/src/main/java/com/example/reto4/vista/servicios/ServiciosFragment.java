@@ -1,4 +1,4 @@
-package com.example.reto3.vista.servicios;
+package com.example.reto4.vista.servicios;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.reto3.R;
+import com.example.reto4.R;
 
 public class ServiciosFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package com.example.reto3.vista.favoritos;
+package com.example.reto4.vista.favoritos;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,11 +10,11 @@ import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
 
-import  com.example.reto3.R;
-import com.example.reto3.modelo.DataBaseSQLController;
-import com.example.reto3.modelo.favoritos.AdaptadorFavoritos;
-import com.example.reto3.modelo.producto.EntidadProducto;
-import com.example.reto3.vista.productos.ProductosFragment;
+import  com.example.reto4.R;
+import com.example.reto4.modelo.DataBaseSQLController;
+import com.example.reto4.modelo.favoritos.AdaptadorFavoritos;
+import com.example.reto4.modelo.producto.EntidadProducto;
+import com.example.reto4.vista.productos.ProductosFragment;
 
 import java.util.ArrayList;
 

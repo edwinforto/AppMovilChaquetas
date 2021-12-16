@@ -1,4 +1,4 @@
-package com.example.reto3.vista;
+package com.example.reto4.vista;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.reto3.controlador.MainActivity;
-import com.example.reto3.R;
-
+import com.example.reto4.controlador.MainActivity;
+import com.example.reto4.R;
 
 
 public class SplashScreen extends AppCompatActivity {

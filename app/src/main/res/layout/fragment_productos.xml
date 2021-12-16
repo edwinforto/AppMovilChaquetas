@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dorado"
-    tools:context=".vista.productos.ProductosFragment">
+    tools:context="com.example.reto4.vista.productos.ProductosFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

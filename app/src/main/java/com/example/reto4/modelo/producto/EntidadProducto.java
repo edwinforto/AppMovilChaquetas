@@ -1,4 +1,4 @@
-package com.example.reto3.modelo.producto;
+package com.example.reto4.modelo.producto;
 
 public class EntidadProducto {
     private int imagen;

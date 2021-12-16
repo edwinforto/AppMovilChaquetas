@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.reto3.ShoppingCarFragment">
+    tools:context="com.example.reto4.ShoppingCarFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
