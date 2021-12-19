@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.example.reto1_g35.R;
+import com.example.reto1_g35.modelo.ConsultarApi;
 import com.example.reto1_g35.vista.Fragment_inicio;
 import com.example.reto1_g35.vista.cart.CartFragment;
 import com.example.reto1_g35.vista.favorites.FavoritesFragment;
@@ -78,17 +79,17 @@ public class MainActivity extends AppCompatActivity {
         }
         if(id == R.id.main){
             transicion = getSupportFragmentManager().beginTransaction();
-            transicion.replace(R.id.contenedor_fragments,inicio).commit();
+            transicion.replace(R.id.contenedor_fragments,inicio).addToBackStack(null).commit();
             Toast.makeText(this,"Página Principal ", Toast.LENGTH_SHORT).show();
         }
         if (id == R.id.nav_gallery){
             transicion = getSupportFragmentManager().beginTransaction();
-            transicion.replace(R.id.contenedor_fragments, servicios).commit();
+            transicion.replace(R.id.contenedor_fragments, servicios).addToBackStack(null).commit();
             Toast.makeText(getApplicationContext(), "Seccion servicios", Toast.LENGTH_LONG ).show();
         }
         if (id == R.id.nav_slideshow){
             transicion = getSupportFragmentManager().beginTransaction();
-            transicion.replace(R.id.contenedor_fragments, sucursal).commit();
+            transicion.replace(R.id.contenedor_fragments, sucursal).addToBackStack(null).commit();
             Toast.makeText(getApplicationContext(), "Sección sucursales", Toast.LENGTH_LONG ).show();
         }
 
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.miniCartIcon){
             transicion = getSupportFragmentManager().beginTransaction();
-            transicion.replace(R.id.contenedor_fragments, cart).commit();
+            transicion.replace(R.id.contenedor_fragments, cart).addToBackStack(null).commit();
             Toast.makeText(getApplicationContext(), "Sección cart", Toast.LENGTH_LONG ).show();
         }
         return super.onOptionsItemSelected(item);

@@ -1,8 +1,6 @@
 package com.example.reto1_g35.modelo.producto;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,27 +8,21 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.reto1_g35.R;
 import com.example.reto1_g35.vista.productos.ProductosFragment;
 
-
-
 import java.util.ArrayList;
 
 
-public class AdaptadorProducto extends  BaseAdapter {
+public class AdaptadorProducto extends BaseAdapter {
 
     private ArrayList<EntidadProducto> listaProd;
     private Context context;
-    FragmentTransaction transicion;
-    Fragment productos;
+
 
 
     public AdaptadorProducto(ArrayList<com.example.reto1_g35.modelo.producto.EntidadProducto> listaProd, Context context) {
@@ -55,8 +47,8 @@ public class AdaptadorProducto extends  BaseAdapter {
 
     @Override
     public View getView(int pos, View view, ViewGroup viewGroup) {
+        EntidadProducto item = (EntidadProducto) getItem(pos);
 
-            com.example.reto1_g35.modelo.producto.EntidadProducto item = (com.example.reto1_g35.modelo.producto.EntidadProducto) getItem(pos);
 
         view = LayoutInflater.from(context).inflate(R.layout.item_producto, null);
         //------------------------------------------------------------------------
@@ -67,9 +59,10 @@ public class AdaptadorProducto extends  BaseAdapter {
         //Button compra = (Button) view.findViewById(R.id.compra);
         ImageButton fav = (ImageButton) view.findViewById(R.id.imageFav);
         fav.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        System.out.println("view--> "+view);
+            @Override
+            public void onClick(View view) {
+                ProductosFragment.actualizarFavoritos(item, context);
+       /* System.out.println("view--> "+view);
        Cursor cursor= ProductosFragment.actualizarFavoritos(item, context);
         if (cursor.getString(4).equals("TRUE")){
             fav.setBackgroundResource(R.drawable.favorite);
@@ -77,9 +70,9 @@ public class AdaptadorProducto extends  BaseAdapter {
         }else{
             fav.setBackgroundResource(R.drawable.nofavorite);
             Toast.makeText(context, "Se elimina de favoritos", Toast.LENGTH_LONG).show();
-}
-    }
-});
+}*/
+            }
+        });
         //-------------Enlazar elementos------------------------
 
         img1.setImageResource(item.getImagen());
@@ -87,9 +80,9 @@ public class AdaptadorProducto extends  BaseAdapter {
         descripcion.setText(item.getDescripcion());
         valor.setText(item.getValor());
         fav.setTransitionName(item.getTitulo());
-        if(item.getFavoritos().equals("TRUE")){
+        if (item.getFavoritos() == 1) {
             fav.setImageResource(R.drawable.favorite);
-        }else{
+        } else {
             fav.setImageResource(R.drawable.nofavorite);
         }
 
@@ -97,8 +90,6 @@ public class AdaptadorProducto extends  BaseAdapter {
         //------------------------------------------------------------------------
         return view;
     }
-
-
 
 
 }

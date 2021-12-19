@@ -15,8 +15,6 @@ import com.example.reto1_g35.R;
 public class SplashScreen extends AppCompatActivity {
 
     private Thread hilo1;
-    private ImageView iconoCarga;
-    private ProgressBar barraProgreso;
     private TextView percent;
     private Handler handler = new Handler();
     private int number = 0;
@@ -27,7 +25,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-       // iconoCarga.setImageResource(R.drawable.catalogohombre12);
         percent = (TextView) findViewById(R.id.percent);
 
         hilo1 = new Thread(new Runnable() {

@@ -6,14 +6,14 @@ public class EntidadProducto {
     private String titulo;
     private String descripcion;
     private String valor;
-    private String favoritos;
+    private int favoritos;
 
-    public EntidadProducto(int imagen, String titulo, String descripcion, String valor, String favoritos ) {
+    public EntidadProducto(int imagen, String titulo, String descripcion, String valor, int favoritos) {
         this.imagen = imagen;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.valor=valor;
-        this.favoritos=favoritos;
+        this.valor = valor;
+        this.favoritos = favoritos;
 
     }
 
@@ -58,12 +58,12 @@ public class EntidadProducto {
     }
 
 
-    public String getFavoritos() {
+    public int getFavoritos() {
 
         return favoritos;
     }
 
-    public void setFavoritos(String favoritos) {
+    public void setFavoritos(int favoritos) {
 
         this.favoritos = favoritos;
     }

@@ -2,18 +2,18 @@ package com.example.reto1_g35.modelo.favoritos;
 
 public class EntidadFavoritos {
 
-    private int imagen;
-    private String titulo;
-    private String descripcion;
-    private String valor;
-    private String favoritos;
+     int imagen;
+     String titulo;
+     String descripcion;
+     String valor;
+     int favoritos;
 
-    public EntidadFavoritos(int imagen, String titulo, String descripcion, String valor, String favoritos ) {
+    public EntidadFavoritos(int imagen, String titulo, String descripcion, String valor, int favoritos) {
         this.imagen = imagen;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.valor=valor;
-        this.favoritos=favoritos;
+        this.valor = valor;
+        this.favoritos = favoritos;
 
     }
 
@@ -58,12 +58,12 @@ public class EntidadFavoritos {
     }
 
 
-    public String getFavoritos() {
+    public int getFavoritos() {
 
         return favoritos;
     }
 
-    public void setFavoritos(String favoritos) {
+    public void setFavoritos(int favoritos) {
 
         this.favoritos = favoritos;
     }

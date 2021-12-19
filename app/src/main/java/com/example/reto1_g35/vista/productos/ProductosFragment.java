@@ -2,68 +2,81 @@ package com.example.reto1_g35.vista.productos;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.reto1_g35.R;
-import com.example.reto1_g35.controlador.MainActivity;
-import com.example.reto1_g35.modelo.DataBaseSQLController;
+import com.example.reto1_g35.modelo.ConsultarApi;
+import com.example.reto1_g35.modelo.favoritos.EntidadFavoritos;
 import com.example.reto1_g35.modelo.producto.AdaptadorProducto;
 import com.example.reto1_g35.modelo.producto.EntidadProducto;
 
-import java.time.Clock;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 
 public class ProductosFragment extends Fragment {
 
-    View v;
-    public static int[] listImg = {R.drawable.catalogohombre3,R.drawable.catalogohombre2,R.drawable.catalogmujer3,
+
+    public static int[] listImg = {R.drawable.catalogohombre3, R.drawable.catalogohombre2, R.drawable.catalogmujer3,
             R.drawable.catalogninos1, R.drawable.catalogmujer2};
 
-    private View view;
-    private Cursor cursor;
-    private ArrayList<EntidadProducto> listaProductos = new ArrayList<>();
+
     private ListView listViewProd;
     private AdaptadorProducto adaptadorProducto;
-
+    ConsultarApi consultarApi;
 
     public ProductosFragment() {
         // Required empty public constructor
     }
 
-    public static Cursor actualizarFavoritos(EntidadProducto item,  Context activity) {
+    public static void actualizarFavoritos(EntidadProducto item, Context activity) {
 
-        DataBaseSQLController conector = new DataBaseSQLController(activity, "Productos", null, 1);
-        SQLiteDatabase db_read = conector.getReadableDatabase();
-         System.out.println("here1--> "+item.getFavoritos());
-        if(item.getFavoritos().equals("FALSE")){
+        System.out.println("here1--> " + item.getFavoritos());
+        if (item.getFavoritos() == 1) {
             System.out.println("here2");
-            item.setFavoritos("TRUE");
-            db_read.execSQL(
-                    "UPDATE productos SET favoritos =? WHERE titulo=?", new Object[]{"TRUE", item.getTitulo()});
-        }else{
-            System.out.println("here3");
-            item.setFavoritos("FALSE");
-            db_read.execSQL(
-                    "UPDATE productos SET favoritos =? WHERE titulo=?", new Object[]{"FALSE", item.getTitulo()});
+            enviarRequest(1, item.getTitulo(), activity);
+            item.setFavoritos(1);
+        } else {
+            item.setFavoritos(0);
+            enviarRequest(0, item.getTitulo(), activity);
         }
-        Cursor cursor2 = db_read.rawQuery("SELECT * FROM productos WHERE titulo=\""+item.getTitulo()+"\"", null);
-        cursor2.moveToNext();
-        System.out.println("actualizacion tabla--> "+item.getTitulo()+"--"+cursor2.getString(0)+
-                cursor2.getString(1)+cursor2.getString(2)+ cursor2.getString(3)+ cursor2.getString(4));
-        return cursor2;
+        return;
+    }
 
+    public static void enviarRequest(int isFavorito, String titulo, Context context) {
+        RequestQueue MyRequestQueue = Volley.newRequestQueue(context);
+        String url = "https://gc6b27684ca8ed5-usaciclo4.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/api/chaquetas/admin/:isFavoritos/:titulo";
+        url = url.replace(":isFavoritos", Integer.toString(isFavorito)).replace(":titulo", titulo);// <----enter your post url here
+        StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                //This code is executed if the server responds, whether or not the response contains data.
+                //The String 'response' contains the server's response.
+            }
+        }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //This code is executed if there is an error.
+            }
+        });
+        MyRequestQueue.add(MyStringRequest);
 
     }
 
@@ -72,37 +85,19 @@ public class ProductosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_productos, container, false);
+        View view = inflater.inflate(R.layout.fragment_productos, container, false);
+        RequestQueue requestQueue = Volley.newRequestQueue(view.getContext());
+        ConsultarApi.todosLosProductos(requestQueue);
         //--------------------------------------------------------------------------------
         listViewProd = (ListView) view.findViewById(R.id.viewProducts);
-        adaptadorProducto = new AdaptadorProducto(getProdItems(),getActivity());
+        adaptadorProducto = new AdaptadorProducto(ConsultarApi.listaTodosProductos, getContext());
         listViewProd.setAdapter(adaptadorProducto);
-
+        //tituloFragment = (TextView) view.findViewById(R.id.productosTitulo);
         //-----------------------------------------------------------------------------
         return view;
     }
 
-    private ArrayList<EntidadProducto> getProdItems(){
-        DataBaseSQLController conector ;//=new DataBaseSQLController(this.getActivity(), "Productos", null, 1);
-        conector = new DataBaseSQLController(this.getActivity(), "Productos", null, 1);
 
-        SQLiteDatabase db_read = conector.getReadableDatabase();
-if(!MainActivity.isCreated){
-        conector.onUpgrade(db_read,1,2);
-    MainActivity.isCreated=true;
-}
-        cursor = db_read.rawQuery("SELECT * FROM productos", null);
-
-
-        //Escritura de elementos de la Base de Datos a la parte visual
-        while (cursor.moveToNext()) {
-            listaProductos.add(new EntidadProducto(listImg[cursor.getInt(0)],cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4)));
-
-
-        }
-        return listaProductos;
-    }
 
 }
