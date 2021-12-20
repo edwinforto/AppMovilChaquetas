@@ -1,14 +1,16 @@
 package com.example.reto1_g35.modelo.favoritos;
 
+import android.graphics.Bitmap;
+
 public class EntidadFavoritos {
 
-     int imagen;
+    Bitmap imagen;
      String titulo;
      String descripcion;
      String valor;
-     int favoritos;
+     String favoritos;
 
-    public EntidadFavoritos(int imagen, String titulo, String descripcion, String valor, int favoritos) {
+    public EntidadFavoritos(Bitmap imagen, String titulo, String descripcion, String valor, String favoritos) {
         this.imagen = imagen;
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -17,12 +19,12 @@ public class EntidadFavoritos {
 
     }
 
-    public int getImagen() {
+    public Bitmap getImagen() {
 
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(Bitmap imagen) {
 
         this.imagen = imagen;
     }
@@ -60,11 +62,11 @@ public class EntidadFavoritos {
 
     public int getFavoritos() {
 
-        return favoritos;
+        return Integer.parseInt(favoritos);
     }
 
     public void setFavoritos(int favoritos) {
 
-        this.favoritos = favoritos;
+        this.favoritos = Integer.toString(favoritos);
     }
 }

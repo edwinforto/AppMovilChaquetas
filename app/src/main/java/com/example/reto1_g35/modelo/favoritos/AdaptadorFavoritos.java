@@ -73,7 +73,7 @@ public class AdaptadorFavoritos extends BaseAdapter {
         });
         //-------------Enlazar elementos------------------------
 
-        img1.setImageResource(item.getImagen());
+        img1.setImageBitmap(item.getImagen());
         titulo.setText(item.getTitulo());
         descripcion.setText(item.getDescripcion());
         valor.setText(item.getValor());

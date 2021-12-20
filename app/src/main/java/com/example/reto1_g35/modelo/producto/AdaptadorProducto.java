@@ -1,6 +1,8 @@
 package com.example.reto1_g35.modelo.producto;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.reto1_g35.R;
 import com.example.reto1_g35.vista.productos.ProductosFragment;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 
@@ -58,6 +61,8 @@ public class AdaptadorProducto extends BaseAdapter {
         TextView valor = (TextView) view.findViewById(R.id.valorItem);
         //Button compra = (Button) view.findViewById(R.id.compra);
         ImageButton fav = (ImageButton) view.findViewById(R.id.imageFav);
+
+
         fav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +80,7 @@ public class AdaptadorProducto extends BaseAdapter {
         });
         //-------------Enlazar elementos------------------------
 
-        img1.setImageResource(item.getImagen());
+        img1.setImageBitmap(item.getImagen());
         titulo.setText(item.getTitulo());
         descripcion.setText(item.getDescripcion());
         valor.setText(item.getValor());

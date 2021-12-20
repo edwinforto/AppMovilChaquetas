@@ -1,28 +1,30 @@
 package com.example.reto1_g35.modelo.producto;
 
+import android.graphics.Bitmap;
+
 public class EntidadProducto {
 
-    private int imagen;
+    private Bitmap imagen;
     private String titulo;
     private String descripcion;
     private String valor;
     private int favoritos;
 
-    public EntidadProducto(int imagen, String titulo, String descripcion, String valor, int favoritos) {
+    public EntidadProducto(Bitmap imagen, String titulo, String descripcion, String valor, String favoritos) {
         this.imagen = imagen;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.valor = valor;
-        this.favoritos = favoritos;
+        this.favoritos = Integer.parseInt(favoritos);
 
     }
 
-    public int getImagen() {
+    public Bitmap getImagen() {
 
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(Bitmap imagen) {
 
         this.imagen = imagen;
     }

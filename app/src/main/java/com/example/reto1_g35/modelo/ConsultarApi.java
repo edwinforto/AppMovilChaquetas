@@ -1,5 +1,6 @@
 package com.example.reto1_g35.modelo;
 
+import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
@@ -17,12 +18,14 @@ import android.content.res.Resources;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.UserHandle;
+import android.util.Base64;
 import android.view.Display;
 
 import androidx.annotation.NonNull;
@@ -36,6 +39,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.reto1_g35.modelo.favoritos.EntidadFavoritos;
 import com.example.reto1_g35.modelo.producto.EntidadProducto;
+import com.example.reto1_g35.vista.favorites.FavoritesFragment;
 import com.example.reto1_g35.vista.productos.ProductosFragment;
 
 import org.json.JSONArray;
@@ -53,10 +57,10 @@ public class ConsultarApi {
 
         String url = "https://gc6b27684ca8ed5-usaciclo4.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/api/chaquetas/productos";
 
+        JSONObject jsonObject = null;
 
 
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, jsonObject, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 //***********************************************************
@@ -66,17 +70,20 @@ public class ConsultarApi {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                        int img = jsonObject.getInt("img");
+                        String img = jsonObject.getString("img");
+                        byte[] imageBytes= Base64.decode(img, Base64.DEFAULT);
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
                         String titulo = jsonObject.getString("titulo");
                         String descripcion = jsonObject.getString("descripcion");
                         String valor = jsonObject.getString("valor");
-                        int isfavoritos = jsonObject.getInt("isfavoritos");
+                        String isfavoritos = jsonObject.getString("isfavoritos");
 
-                        listaProductos2.add(new EntidadProducto(ProductosFragment.listImg[img], titulo, descripcion, valor, isfavoritos));
+                        listaProductos2.add(new EntidadProducto(bitmap, titulo, descripcion, valor, isfavoritos));
 
 
                     }
                     listaTodosProductos=listaProductos2;
+                    new ProductosFragment();
                     //tituloFragment.setText("Productos"+'\n');
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -98,13 +105,13 @@ public class ConsultarApi {
 
 
     }
-
+    @TargetApi(1)
     public ArrayList<EntidadFavoritos> getProdItems(RequestQueue requestQueue){
         ArrayList<EntidadFavoritos> listaProductos2 = new ArrayList<>();
-
+        JSONObject value=null;
         String url = "https://gc6b27684ca8ed5-usaciclo4.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/api/chaquetas/favoritos";
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest( url, value, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 //***********************************************************
@@ -113,16 +120,19 @@ public class ConsultarApi {
                     JSONArray jsonArray = response.getJSONArray("items");
                     for(int i = 0; i < jsonArray.length(); i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        int img = jsonObject.getInt("img");
+                        String img = jsonObject.getString("img");
+                        byte[] imageBytes= Base64.decode(img, Base64.DEFAULT);
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
                         String titulo = jsonObject.getString("titulo");
                         String descripcion = jsonObject.getString("descripcion");
                         String valor = jsonObject.getString("valor");
-                        int isfavoritos = jsonObject.getInt("isfavoritos");
+                        String isfavoritos = jsonObject.getString("isfavoritos");
 
-                        listaProductos2.add(new EntidadFavoritos(ProductosFragment.listImg[img], titulo, descripcion,valor,isfavoritos));
+                        listaProductos2.add(new EntidadFavoritos(bitmap, titulo, descripcion,valor,isfavoritos));
                     }
                     listaProductos=listaProductos2;
-                    //tituloFragment.setText('\n');
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -49,13 +50,14 @@ public class ProductosFragment extends Fragment {
     public static void actualizarFavoritos(EntidadProducto item, Context activity) {
 
         System.out.println("here1--> " + item.getFavoritos());
-        if (item.getFavoritos() == 1) {
-            System.out.println("here2");
+        if (item.getFavoritos() == 0) {
             enviarRequest(1, item.getTitulo(), activity);
             item.setFavoritos(1);
+            Toast.makeText(activity, "Se agrega producto a Favoritos", Toast.LENGTH_LONG ).show();
         } else {
             item.setFavoritos(0);
             enviarRequest(0, item.getTitulo(), activity);
+            Toast.makeText(activity, "Se elimina producto de Favoritos", Toast.LENGTH_LONG ).show();
         }
         return;
     }
